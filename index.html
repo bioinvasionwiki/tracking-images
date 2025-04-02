@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tracking Page</title>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS4JVXD4Q9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HS4JVXD4Q9');
-    </script>
+  <meta charset="UTF-8">
+  <title>Tracking Pixel</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS4JVXD4Q9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HS4JVXD4Q9');
+    gtag('event', 'wiki_pixel_hit', {
+      event_category: 'Tracking',
+      event_label: window.location.href,
+      value: 1
+    });
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      background: transparent;
+    }
+  </style>
 </head>
-<body>
-    <h1>Tracking Page</h1>
-    <p>If you see this page, tracking is active.</p>
-
-    <!-- Tracking Image -->
-    <img src="tracking.png" alt="Tracking Image">
-
-</body>
+<body></body>
 </html>
